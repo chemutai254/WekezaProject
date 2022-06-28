@@ -23,6 +23,6 @@ user_1 = User(username = input("Enter UserName: "),
               id_no = int(input("Enter Your ID Number: ")),
               PhoneNumber = int(input("Enter Your Phone Number: ")),
               Password = input("Enter Your Password: "))
-session.add(car1)
+session.add(user_1)
 session.commit()
 
