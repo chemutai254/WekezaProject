@@ -1,10 +1,14 @@
 wekeza 
 ==============================
 
+
 # AUTHOURS 
  * Nancy chemutai
  * Rodyne 
  * Brian kiplangat
+
+
+###########
 
 * Initial account balance can be set on startup
 * Interactive user input
