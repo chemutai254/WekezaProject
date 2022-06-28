@@ -17,7 +17,7 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 # Here we take inputs from user and create an object
-user_1 = User(username = imput("Enter UserName: "),
+user_1 = User(username = input("Enter UserName: "),
               firstname = input("Enter Your First Name: "),
               lastname = input("Enter Your Last Name: "),
               id_no = int(input("Enter Your ID Number: ")),
