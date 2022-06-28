@@ -2,7 +2,7 @@ wekeza
 ==============================
 
 
-# AUTHOURS 
+# AUTHORS 
  * Nancy chemutai
  * Rodyne 
  * Brian kiplangat
