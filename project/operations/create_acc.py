@@ -7,7 +7,7 @@ of creating an account
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from project.tables.users import User
+from users import User
 
 # contains string for the database
 str1 = 'mysql://root:""@localhost:3306/WEKEZA'
