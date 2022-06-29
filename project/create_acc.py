@@ -25,4 +25,3 @@ user_1 = User(username = input("Enter UserName: "),
               Password = input("Enter Your Password: "))
 session.add(user_1)
 session.commit()
-
