@@ -50,5 +50,3 @@ def create_account():
                           account = [Accounts(acc_balance=0)])
             session.add(user_1)
             session.commit()
-
-create_account()

@@ -7,6 +7,7 @@ Defines a function login
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from tables import User
+from menu import menu
 
 # contains string for the database
 str1 = 'mysql://root:""@localhost:3306/WEKEZA'
@@ -24,6 +25,7 @@ def login():
         print("User Does Not Exist Kindly Create an Account")
     elif password == results.Password:
         print("SuccessFull Login")
+        menu(results)
     else:
         print("Wrong Password")
-login()
+        login()
