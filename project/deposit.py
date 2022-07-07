@@ -25,7 +25,6 @@ def deposit(user_details):
     amn_to_dep = int(input("Enter Amount To Deposit: "))
     if amn_to_dep <= 500:
         print("You can only deposit > 500\=")
-        deposit(user_details)
     else:
         results = session.query(Accounts).filter(Accounts.user_id
                   == user_details.user_id).first()

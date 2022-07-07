@@ -35,7 +35,6 @@ def withdraw(user_details):
         print("Insufficient Funds")
         print("Your Account Balance is ", end='')
         print(results.acc_balance)
-        withdraw(copy)
     else:
         withdraw_1 = Withdrawals()
         withdraw_1.user_id = user_details.user_id
@@ -47,5 +46,3 @@ def withdraw(user_details):
         session.commit()
         print("Successfully Withdrawn: ",end='')
         print(withdraw_1.amt_withdrawn)
-
-

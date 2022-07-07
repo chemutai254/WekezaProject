@@ -26,6 +26,7 @@ def login():
     elif password == results.Password:
         print("SuccessFull Login")
         menu(results)
+        return
     else:
         print("Wrong Password")
         login()
