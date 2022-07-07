@@ -3,16 +3,6 @@
 Defines Function Transaction
 """
 
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from tables import Deposits, Accounts, Withdrawals
-
-# contains string for the database
-str1 = 'mysql://root:""@localhost:3306/WEKEZA'
-# creates a connection to our database
-engine = create_engine(str1)
-DBSession = sessionmaker(bind=engine)
-session = DBSession()
 
 def transactions(arg, user_details):
     """
@@ -26,6 +16,17 @@ def transactions(arg, user_details):
                 case 5 Checks Deposit History
         user_details: holds details for logged in user
     """
+
+    from sqlalchemy import create_engine
+    from sqlalchemy.orm import sessionmaker
+    from tables import Deposits, Accounts, Withdrawals
+
+    # contains string for the database
+    str1 = 'mysql://root:""@localhost:3306/WEKEZA'
+    # creates a connection to our database
+    engine = create_engine(str1)
+    DBSession = sessionmaker(bind=engine)
+    session = DBSession()
     if arg == 3:
         results = session.query(Accounts).filter(Accounts.user_id
            == user_details.user_id).first()

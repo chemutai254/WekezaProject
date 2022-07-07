@@ -3,16 +3,6 @@
 Defines the Withdrawal Process
 """
 
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from tables import Withdrawals, Accounts
-
-# contains string for the database
-str1 = 'mysql://root:""@localhost:3306/WEKEZA'
-# creates a connection to our database
-engine = create_engine(str1)
-DBSession = sessionmaker(bind=engine)
-session = DBSession()
 
 def withdraw(user_details):
     """
@@ -27,6 +17,16 @@ def withdraw(user_details):
     # stores users details for recalling withdraw
     copy = user_details
 
+    from sqlalchemy import create_engine
+    from sqlalchemy.orm import sessionmaker
+    from tables import Withdrawals, Accounts
+
+    # contains string for the database
+    str1 = 'mysql://root:""@localhost:3306/WEKEZA'
+    # creates a connection to our database
+    engine = create_engine(str1)
+    DBSession = sessionmaker(bind=engine)
+    session = DBSession()
     amn_to_withdr = int(input("Enter Amount To Withdraw: "))
     results = session.query(Accounts).filter(Accounts.user_id
         == user_details.user_id).first()
