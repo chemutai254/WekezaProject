@@ -64,3 +64,7 @@
 1. Loan Processing
 2. Monthly and Weekly contributions.
 ---
+
+## Contributing
+- The team encourages anyone with more ideas on how to improve on this project to always contribute.
+--- 
